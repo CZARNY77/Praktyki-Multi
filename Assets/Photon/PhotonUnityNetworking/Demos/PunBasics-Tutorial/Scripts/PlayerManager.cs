@@ -93,7 +93,7 @@ namespace Photon.Pun.Demo.PunBasics
                 Debug.LogError("<Color=Red><b>Missing</b></Color> CameraWork Component on player Prefab.", this);
             }
 
-            // Create the UI
+            /*// Create the UI
             if (this.playerUiPrefab != null)
             {
                 GameObject _uiGo = Instantiate(this.playerUiPrefab);
@@ -102,7 +102,7 @@ namespace Photon.Pun.Demo.PunBasics
             else
             {
                 Debug.LogWarning("<Color=Red><b>Missing</b></Color> PlayerUiPrefab reference on player Prefab.", this);
-            }
+            }*/
 
             #if UNITY_5_4_OR_NEWER
             // Unity 5.4 has a new scene management. register a method to call CalledOnLevelWasLoaded.
@@ -242,13 +242,6 @@ namespace Photon.Pun.Demo.PunBasics
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                // we don't want to fire when we interact with UI buttons for example. IsPointerOverGameObject really means IsPointerOver*UI*GameObject
-                // notice we don't use on on GetbuttonUp() few lines down, because one can mouse down, move over a UI element and release, which would lead to not lower the isFiring Flag.
-                if (EventSystem.current.IsPointerOverGameObject())
-                {
-                    //	return;
-                }
-
                 if (!this.IsFiring)
                 {
                     this.IsFiring = true;
