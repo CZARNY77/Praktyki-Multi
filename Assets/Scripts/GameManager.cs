@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
+using Com.MyCompany.MyGame;
 
-namespace Com.MyCompany.MyGame
+namespace Photon.Pun.Demo.PunBasics
 {
     public class GameManager : MonoBehaviourPunCallbacks
     {

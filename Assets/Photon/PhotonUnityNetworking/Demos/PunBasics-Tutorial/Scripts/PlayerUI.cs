@@ -7,11 +7,12 @@
 // </summary>
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
-
+using Photon.Pun.Demo.PunBasics;
+using Com.MyCompany.MyGame;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Photon.Pun.Demo.PunBasics
+namespace Com.MyCompany.MyGame
 {
 	#pragma warning disable 649
 

@@ -12,8 +12,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using Photon.Realtime;
+using Photon.Pun.Demo.PunBasics;
+using Photon.Pun;
 
-namespace Photon.Pun.Demo.PunBasics
+namespace Com.MyCompany.MyGame
 {
 	#pragma warning disable 649
 
@@ -23,12 +25,12 @@ namespace Photon.Pun.Demo.PunBasics
 	/// Deals with quiting the room and the game
 	/// Deals with level loading (outside the in room synchronization)
 	/// </summary>
-	public class GameManager : MonoBehaviourPunCallbacks
+	public class GameManager_Demo: MonoBehaviourPunCallbacks
     {
 
 		#region Public Fields
 
-		static public GameManager Instance;
+		static public GameManager_Demo Instance;
 
 		#endregion
 

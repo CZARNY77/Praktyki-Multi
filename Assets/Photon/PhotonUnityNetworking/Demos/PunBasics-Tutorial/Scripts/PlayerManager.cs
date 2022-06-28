@@ -7,11 +7,12 @@
 // </summary>
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
-
+using Photon.Pun;
+using Photon.Pun.Demo.PunBasics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Photon.Pun.Demo.PunBasics
+namespace Com.MyCompany.MyGame
 {
 	#pragma warning disable 649
 
@@ -29,6 +30,8 @@ namespace Photon.Pun.Demo.PunBasics
         [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
         public static GameObject LocalPlayerInstance;
 
+        [Tooltip("The Player's UI GameObject Prefab")]
+        [SerializeField] public GameObject PlayerUiPrefab;
         #endregion
 
         #region Private Fields
@@ -93,7 +96,7 @@ namespace Photon.Pun.Demo.PunBasics
                 Debug.LogError("<Color=Red><b>Missing</b></Color> CameraWork Component on player Prefab.", this);
             }
 
-            /*// Create the UI
+            // Create the UI
             if (this.playerUiPrefab != null)
             {
                 GameObject _uiGo = Instantiate(this.playerUiPrefab);
@@ -102,7 +105,7 @@ namespace Photon.Pun.Demo.PunBasics
             else
             {
                 Debug.LogWarning("<Color=Red><b>Missing</b></Color> PlayerUiPrefab reference on player Prefab.", this);
-            }*/
+            }
 
             #if UNITY_5_4_OR_NEWER
             // Unity 5.4 has a new scene management. register a method to call CalledOnLevelWasLoaded.
@@ -137,7 +140,7 @@ namespace Photon.Pun.Demo.PunBasics
 
                 if (this.Health <= 0f)
                 {
-                    GameManager.Instance.LeaveRoom();
+                    GameManager_Demo.Instance.LeaveRoom();
                 }
             }
 
